@@ -1,0 +1,68 @@
+//Decoder for two 7-seg display
+module display (Entrada, Hex0, Hex1);
+// I/O list
+input wire[5:0] Entrada;
+output reg [6:0] Hex0, Hex1;
+// Digits and symbols as parameters
+localparam espaco = 7'b1111111; //7F
+localparam menos  = 7'b0111111; //3F
+localparam zero   = 7'b1000000; //40
+localparam um 	   = 7'b1111001; //79
+localparam dois   = 7'b0100100; //24
+localparam tres 	= 7'b0110000; //30
+localparam quatro = 7'b0011001; //19
+localparam cinco  = 7'b0010010; //12
+localparam seis 	= 7'b0000010; //02
+localparam sete 	= 7'b1111000; //78
+localparam oito 	= 7'b0000000; //00
+localparam nove 	= 7'b0011000; //18
+
+always @ (Entrada) 
+	case (Entrada)
+	  // Positive values 
+          6'b000000: {Hex1,Hex0} <=  {zero, zero};
+          6'b000001: {Hex1,Hex0} <=  {zero, um};
+          6'b000010: {Hex1,Hex0} <=  {zero, dois};
+          6'b000011: {Hex1,Hex0} <=  {zero, tres};
+          6'b000100: {Hex1,Hex0} <=  {zero, quatro};
+          6'b000101: {Hex1,Hex0} <=  {zero, cinco};
+          6'b000110: {Hex1,Hex0} <=  {zero, seis};
+          6'b000111: {Hex1,Hex0} <=  {zero, sete};
+          6'b001000: {Hex1,Hex0} <=  {zero, oito};
+          6'b001001: {Hex1,Hex0} <=  {zero, nove};
+          6'b001010: {Hex1,Hex0} <=  {um, zero};
+          6'b001011: {Hex1,Hex0} <=  {um, um};
+          6'b001100: {Hex1,Hex0} <=  {um, dois};
+          6'b001101: {Hex1,Hex0} <=  {um, tres};
+          6'b001110: {Hex1,Hex0} <=  {um, quatro};
+          6'b001111: {Hex1,Hex0} <=  {um, cinco};
+          6'b010000: {Hex1,Hex0} <=  {um, seis};
+          6'b010001: {Hex1,Hex0} <=  {um, sete};
+          6'b010010: {Hex1,Hex0} <=  {um, oito};
+          6'b010011: {Hex1,Hex0} <=  {um, nove};
+          6'b010100: {Hex1,Hex0} <=  {dois, zero};
+          6'b010101: {Hex1,Hex0} <=  {dois, um};
+          6'b010110: {Hex1,Hex0} <=  {dois, dois};
+          6'b010111: {Hex1,Hex0} <=  {dois, tres};
+          6'b011000: {Hex1,Hex0} <=  {dois, quatro};
+          6'b011001: {Hex1,Hex0} <=  {dois, cinco};
+          6'b011010: {Hex1,Hex0} <=  {dois, seis};
+          6'b011011: {Hex1,Hex0} <=  {dois, sete};
+          6'b011100: {Hex1,Hex0} <=  {dois, oito};
+          6'b011101: {Hex1,Hex0} <=  {dois, nove};
+          6'b011110: {Hex1,Hex0} <=  {tres, zero};
+          6'b011111: {Hex1,Hex0} <=  {tres, um};
+          //Negative values
+          6'b100001: {Hex1,Hex0} <= {menos, um};
+          6'b100010: {Hex1,Hex0} <= {menos, dois};
+          6'b100011: {Hex1,Hex0} <= {menos, tres};
+          6'b100100: {Hex1,Hex0} <= {menos, quatro};
+          6'b100101: {Hex1,Hex0} <= {menos, cinco};
+          6'b100110: {Hex1,Hex0} <= {menos, seis};
+          6'b100111: {Hex1,Hex0} <= {menos, sete};
+          6'b101000: {Hex1,Hex0} <= {menos, oito};
+          6'b101001: {Hex1,Hex0} <= {menos, nove};
+          6'b101010: {Hex1,Hex0} <= {menos, menos};
+          default:   {Hex1,Hex0} <= {espaco, espaco};
+        endcase
+endmodule
