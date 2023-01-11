@@ -1,0 +1,35 @@
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+
+# Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# File: C:\Projetos\ELTD12_2020\Aula3\Atividade3\output_files\cnt.csv
+# Generated on: Fri Sep 25 17:17:57 2020
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+clk,Input,PIN_B8,7,B7_N0,PIN_B8,3.3 V Schmitt Trigger,,,,,
+display[6],Output,PIN_C17,7,B7_N0,PIN_C7,3.3-V LVTTL,,,,,
+display[5],Output,PIN_D17,7,B7_N0,PIN_D17,3.3-V LVTTL,,,,,
+display[4],Output,PIN_E16,7,B7_N0,PIN_E16,3.3-V LVTTL,,,,,
+display[3],Output,PIN_C16,7,B7_N0,PIN_C16,3.3-V LVTTL,,,,,
+display[2],Output,PIN_C15,7,B7_N0,PIN_C15,3.3-V LVTTL,,,,,
+display[1],Output,PIN_E15,7,B7_N0,PIN_E15,3.3-V LVTTL,,,,,
+display[0],Output,PIN_C14,7,B7_N0,PIN_C14,3.3-V LVTTL,,,,,
+leds[3],Output,PIN_B10,7,B7_N0,PIN_B10,3.3-V LVTTL,,,,,
+leds[2],Output,PIN_A10,7,B7_N0,PIN_A10,3.3-V LVTTL,,,,,
+leds[1],Output,PIN_A9,7,B7_N0,PIN_A9,3.3-V LVTTL,,,,,
+leds[0],Output,PIN_A8,7,B7_N0,PIN_A8,3.3-V LVTTL,,,,,
+rst0,Input,PIN_C10,7,B7_N0,PIN_C10,3.3-V LVTTL,,,,,
+rst1,Input,PIN_C11,7,B7_N0,PIN_C11,3.3-V LVTTL,,,,,
